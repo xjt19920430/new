@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #cccccc;
+  font-size: 14px;
+  overflow: hidden;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  max-width: 640px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-top: 44px;
+  position: relative;
+}
+.top {
+  height: 44px;
+  width: 100%;
+  padding: 0 40px;
+  background: url("../images/header-bg.png") repeat-x;
+  -webkit-background-size: 1px 44px;
+  background-size: 1px 44px;
+  border-bottom: 1px solid #cccccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top form {
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+}
+.top form input {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 0 0 10px;
+}
+.top a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40px;
+  background: url("../images/sprites.png");
+  background-clip: content-box;
+  background-origin: content-box;
+  padding: 12px 10px;
+  background-position: -21px 0;
+  -webkit-background-size: 200px 200px;
+  background-size: 200px 200px;
+}
+.top a:nth-child(3) {
+  left: auto;
+  right: 0;
+  background-position: -61px 0;
+}
+/*其中背景图片居中.采用了背景裁剪和背景原点来实现了背景图片的居中*/
+.bottom {
+  width: 100%;
+  height: 100%;
+  padding-left: 90px;
+  position: relative;
+}
+.bottom .nav {
+  width: 90px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.bottom .nav ul {
+  width: 100%;
+}
+.bottom .nav ul li {
+  width: 100%;
+}
+.bottom .nav ul li a {
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #cccccc;
+}
+.bottom .nav ul .current a {
+  border-right: none;
+  color: red;
+}
+.bottom .main {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bottom .main .banner {
+  display: block;
+}
+.bottom .main .banner img {
+  width: 100%;
+}
+.bottom .main .submain {
+  width: 100%;
+}
+.bottom .main .submain ul {
+  width: 100%;
+  overflow: hidden;
+}
+.bottom .main .submain ul li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bottom .main .submain ul li a {
+  display: block;
+  width: 100%;
+}
+.bottom .main .submain ul li a img {
+  width: 80%;
+}
