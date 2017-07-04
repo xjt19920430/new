@@ -4,20 +4,22 @@ window.onload=function  (){
 }
 
 function left (){
-    //»ñÈ¡ÐèÒªµÄÔªËØ
+    //ï¿½ï¿½È¡ï¿½ï¿½Òªï¿½ï¿½Ôªï¿½ï¿½
     var lisrH=$('.nav ul li').height();
     var maxT=$('.nav').height()-$('.nav ul').height();
     var maxH=maxT-100;
-    $('.nav ul li').each(function (index,e){//±éÀúÃ¿Ò»¸öli ,ÔÚµã»÷µÄÊ±ºò,µã»÷ÄÄÒ»¸ö,ÄÄÒ»¸öÏÔÊ¾¸ßÁÁÐ§¹û,²¢ÇÒulÒÆ¶¯.
-        $(e).tap(function  (){
+    var current=0;
+    $('.nav ul li').each(function (index,e){//ï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½li ,ï¿½Úµï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½,ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ulï¿½Æ¶ï¿½.
+        $(e).click(function  (){
             $(this).addClass('current').siblings().removeClass('current');
             $('.nav ul').css({transform:'translateY('+-index*lisrH+'px)'});
             $('.nav ul').css({transition:'all 0.3s'});
-            var y=-index*lisrH;//ulÒÆ¶¯µÄ¾àÀë
+            var y=-index*lisrH;//ulï¿½Æ¶ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½
             if(y<=maxT){
                 y=maxT;
             }
             $('.nav ul').css({transform:'translateY('+y+'px)'});
+            current=y
         })
     })
     var tartY=0;
@@ -60,7 +62,7 @@ function left (){
 }
 
 function right (){
-    //»ñÈ¡ÐèÒªµÄÔªËØ
+    //ï¿½ï¿½È¡ï¿½ï¿½Òªï¿½ï¿½Ôªï¿½ï¿½
     var maxT=$('.main').height()-$('.main .marin-a').height();
     var maxH=maxT-100;
 
